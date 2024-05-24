@@ -63,6 +63,7 @@ const makeMove = (row: number, col: number) => {
     if (winnerSymbol) {
       winner.value = winnerSymbol === 'X' ? playerOne.value : playerTwo.value;
       gameOverText.value = `Vinnaren är: ${winner.value}`;
+      itsYourTurn.value = ``;
     } else if (controlIfTie(board.value)) {
       itsATie.value = true;
       gameOverText.value = "Det blev lika";
